@@ -24,12 +24,11 @@
 ;;
 ;;; Code:
 
-
 (defgroup rosi nil
   "Major mode for editing Rosi code."
   :prefix "rosi-"
   :group 'languages
-  :link '(url-link :tag "Github" "https://github.com/rosi-emacs/rosi-mode")
+  :link '(url-link :tag "Github" "https://github.com/schmir/rosi.el")
   :link '(emacs-commentary-link :tag "Commentary" "rosi-mode"))
 
 (defface rosi-perform-face
@@ -179,6 +178,7 @@
     table)
   "Syntax table for RosiSQL files.")
 
+;;;###autoload
 (define-derived-mode rosi-mode prog-mode "Rosi"
   "Major mode for editing rosi sql files."
   (set-syntax-table rosi-mode-syntax-table)

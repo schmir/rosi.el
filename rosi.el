@@ -162,15 +162,6 @@
 	 "zerofill") 'symbols) . font-lock-keyword-face))
   "Minimal highlighting expressions for rosi mode.")
 
-
-;; (defvar rosi-mode-syntax-table
-;;   (let ((st (make-syntax-table)))
-;;     (modify-syntax-entry ?_ "w" st)
-;;     st)
-;;   "Syntax table for rosi-mode.")
-
-;;; Code
-
 (defun rosi-which-function ()
   "Return the name of the function point is in."
   (save-excursion
@@ -183,19 +174,8 @@
     ;; Give punctuation syntax to ASCII that normally has symbol
     ;; syntax or has word syntax and isn't a letter.
     (modify-syntax-entry ?$ "." table)
-    ;; (modify-syntax-entry ?% "." table)
-    ;; exceptions
-    ;; (modify-syntax-entry ?# "<" table)
     (modify-syntax-entry ?\/ ". 14bn" table)
     (modify-syntax-entry ?* ". 23bn" table)
-
-    ;; (modify-syntax-entry ?\/ ". 12b" table)
-    ;; (modify-syntax-entry ?\n "> b" table)
-    ;; (modify-syntax-entry ?# "< b" table)
-    ;; (modify-syntax-entry ?\n ">" table)
-    ;; (modify-syntax-entry ?' "\"" table)
-
-    ;; (modify-syntax-entry ?` "$" table)
     table)
   "Syntax table for RosiSQL files.")
 

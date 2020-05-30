@@ -189,7 +189,5 @@
 		("PROCEDURE" "^[\t ]*PROCEDURE\\(.*\\)" 1)))
   (set (make-local-variable 'font-lock-defaults) '(rosi-font-lock-keywords nil t)))
 
-(add-to-list 'which-func-modes 'rosi-mode)
-
 (provide 'rosi)
 ;;; rosi.el ends here
